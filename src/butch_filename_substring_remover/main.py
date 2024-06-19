@@ -3,7 +3,10 @@ import os
 import sys
 import argparse
 
-from butch_filename_substring_remover import rename_directory
+# import sys
+# sys.path.append('/Volumes/Untitled/python/butch_filename_substring_remover/src')
+
+from .rename_directory import rename_directory
 
 def main() -> None:
     parser = argparse.ArgumentParser(description='Batch renamer script')

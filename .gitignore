@@ -4,3 +4,8 @@ setup.py
 to_rename.txt
 *.pyc
 tests/
+.github
+src/butch_filename_substring_remover.egg-info/
+dist/
+.env
+.pypirc

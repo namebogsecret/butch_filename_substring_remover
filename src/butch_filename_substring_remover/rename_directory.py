@@ -1,6 +1,6 @@
 
 import os
-from butch_filename_substring_remover import rename_files_and_dirs
+from .rename import rename_files_and_dirs
 
 def rename_directory(root_directory: str, substrings_to_remove: list) -> None:
     # Check if the directory exists
