@@ -12,7 +12,7 @@ def rename_files_and_dirs(root_dir: str, to_remove: set[str]) -> None:
         line = f'Processing: {dirpath}'
         current_length = len(line)
         max_length = max(max_length, current_length)  # Update the maximum length of the string
-        print(f'\r{line}{" " * (max_length - current_length)}', end='')
+        print(f'\r{line}{" " * (max_length - current_length)}', end='\n')
 
         # Renaming files
         for filename in filenames:
