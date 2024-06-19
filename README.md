@@ -63,5 +63,3 @@ will rename the files to:
 ## License
 
 MIT License
-
-```
