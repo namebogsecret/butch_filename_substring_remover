@@ -1,0 +1,6 @@
+._main.py
+pyproject.toml
+setup.py
+to_rename.txt
+*.pyc
+tests/
