@@ -7,3 +7,6 @@ def remove_substrings(s: str, to_remove: set[str]) -> str:
         if s.lower().startswith(substring.lower()):
             s = s.lower().replace(substring.lower(), "", 1)
     return s
+
+def color_text(text, color_code):
+    return f"\033[{color_code}m{text}\033[0m"

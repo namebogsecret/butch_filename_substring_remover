@@ -3,9 +3,6 @@ import os
 import sys
 import argparse
 
-# import sys
-# sys.path.append('/Volumes/Untitled/python/butch_filename_substring_remover/src')
-
 from .rename_directory import rename_directory
 
 def main() -> None:
