@@ -1,29 +1,67 @@
-# Batch Renamer
+```markdown
+# Butch Filename Substring Remover
 
-Batch Renamer - это скрипт для массового переименования файлов и папок в указанной директории. Он удаляет заданные подстроки из имен файлов и папок.
+This is a batch renaming script to remove substrings from filenames and directories.
 
-## Установка
+## Installation
 
-1. Склонируйте репозиторий:
-   ```bash
-   git clone https://github.com/yourusername/batch_renamer.git
-   ```
-2. Перейдите в директорию проекта:
-   ```bash
-   cd batch_renamer
-   ```
-
-## Использование
+You can install this package using pip:
 
 ```bash
-python batch_renamer.py /path/to/directory substring1 substring2 ...
+pip install butch_filename_substring_remover
 ```
 
-Пример:
+## Usage
+
+### Command Line
+
 ```bash
-python batch_renamer.py /root/ test_1 test_2 test_3
-```
+butch-rename /path/to/directory substring1 substring2
 ```
 
-### 4. setup.py
-Этот файл используется для установки проекта через `pip`:
+### As a Module
+
+```python
+from butch_filename_substring_remover import rename_directory
+
+root_directory = '/path/to/directory'
+substrings_to_remove = ['substring1', 'substring2']
+
+try:
+    rename_directory(root_directory, substrings_to_remove)
+    print("Renaming completed successfully.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+```
+
+## Example
+
+Assume you have a directory with the following files:
+
+```
+/example_dir
+    file1_test.txt
+    file2_sample.txt
+    subdir1_test
+```
+
+Running the following command:
+
+```bash
+butch-rename /example_dir test sample
+```
+
+will rename the files to:
+
+```
+/example_dir
+    file1_.txt
+    file2_.txt
+    subdir1_
+```
+
+## License
+
+MIT License
+
+```
